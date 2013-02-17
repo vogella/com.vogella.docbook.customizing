@@ -9,6 +9,7 @@
 	<xsl:import href="&db;/fo/highlight.xsl" />
 	<xsl:import href="./fo/mybooktitlepage.xsl" />
 	<xsl:import href="./fo/myparttitlepage.xsl" />
+  <xsl:import href="./fo/mychaptertitlepage.xsl" />
   <xsl:import href="./fo/myadmon.xsl"/>
 
 	<!-- Defining my parameters -->
@@ -154,21 +155,6 @@
 			name="hyphenation-character">&#x25BA;</xsl:attribute> FOP doesn't support 
 			this yet? -->
 	</xsl:attribute-set>
-
-
-
-
-	<xsl:template match="title" mode="chapter.titlepage.recto.auto.mode">
-		<fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format"
-			xsl:use-attribute-sets="chapter.titlepage.recto.style" margin-left="{$title.margin.left}"
-			font-size="18pt" font-weight="bold" font-family="{$title.font.family}">
-			<xsl:call-template name="component.title">
-				<xsl:with-param name="node" select="ancestor-or-self::chapter[1]" />
-			</xsl:call-template>
-		</fo:block>
-	</xsl:template>
-
-
 
 
 	<!-- Customize the TOC Title -->
