@@ -9,6 +9,7 @@
 	<xsl:import href="&db;/fo/highlight.xsl" />
 	<xsl:import href="./fo/mybooktitlepage.xsl" />
 	<xsl:import href="./fo/myparttitlepage.xsl" />
+  <xsl:import href="./fo/myadmon.xsl"/>
 
 	<!-- Defining my parameters -->
 	<xsl:param name="footnotetext">
