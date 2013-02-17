@@ -26,6 +26,9 @@
       <fo:block xsl:use-attribute-sets="chapter.titlepage.title.properties">
         <xsl:apply-templates select=".." mode="title.markup"/>
       </fo:block>
+      <fo:block text-align-last="justify"><fo:leader
+        leader-pattern="rule"
+        leader-pattern-width="1pt"/></fo:block>
     </fo:block>    
   </xsl:template>
   
